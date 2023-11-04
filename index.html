@@ -7,8 +7,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>ぴぴぴよゲーム</title>
 
-    <meta name="description" content=<%= yield(:description)%> />
+    <meta name="description" content="オンライン対戦ブラウザゲーム">
    
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="qa.css" type="text/css">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9SVNF4SHK8"></script>
     <script>
@@ -29,19 +32,14 @@
         <div class="header-container">
           <div class="sitetitle">
             <h1 class="header-logo">
-              <a href="<%= root_path %>">
-                <%= image_tag("pictyping-logo-full.svg", alt: "pictyping-logo") %>
+              <a href="index.html">
+                <img alt="pipipiyo-logo" src="./images/pipipiyo-logo.svg">
               </a>
             </h1>
           </div>
           <nav>
             <ul class="header-nav">
-              <li><a href="<%= rating_ranking_index_path	%>" class="btn-text-black" id="btn-ranking-link" target="_blank"><i></i>ランキング</a></li>
-              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfl1SXAC-2mH_z_YbNs_jw8IDbZpS-xdMuZ0rrSjWtOajTGHg/viewform" class="btn-text-black" target="_blank">単語募集</a></li>
-      <!--        ゲストアカウントの場合のみ表示-->
-              <% if current_or_guest_user.guest then %>
-                <li><%= link_to 'ログイン',user_session_path,class:"btn-square-blue",target: :_blank %></li>
-              <% end %>
+              
             </ul>
           </nav>
         </div>
@@ -54,15 +52,15 @@
 
       <div class="gc-container">
         <div class="game-screen">
-          <iframe id="unity-webgl" loading="lazy" src="<%=get_typing_bomb_webgl_game_path%>" scrolling="auto" frameborder="0">
+          <iframe id="unity-webgl" loading="lazy" src="https://physicsc-chain-online.netlify.app/" scrolling="auto" frameborder="0">
           </iframe>
-          <p class="explain">プレイできない場合は<%=link_to "こちらのヘルプ",typing_bomb_help_path %></p>
+          <!-- <p class="explain">プレイできない場合は<%=link_to "こちらのヘルプ",typing_bomb_help_path %></p> -->
         </div>
       </div>
       
       </div>
       <div class="page-summaries">
-        <div class="page-summaries-item">
+        <!-- <div class="page-summaries-item">
           <h2><i class="way-of-playing"></i>遊び方</h2>
           <p>
             読み込み完了後、名前を入力していただき、フリーマッチングを押すことで、マッチングを開始します。
@@ -73,51 +71,22 @@
       
             オンライン対戦ですので、マッチングができず、プレイできない可能性があります。
           </p>
-        </div>
+        </div> -->
         <div class="page-summaries-item">
           <h2><i class="icon-notes"></i>注意事項</h2>
           <ul>
             <li><span>意図的な切断行為はおやめください。</span></li>
             <li><span>不適切な名前の使用はおやめください。</span></li>
-            <li><span>切断行為等の迷惑行為が何度も行われている場合アカウント削除等の措置を行います。</span></li>
           </ul>
         </div>
         <div class="page-summaries-item">
           <h2><i class="icon-question"></i>よくある質問</h2>
-          <details class="qa-001">
-            <summary>キーボードの入力が反応しなくなった</summary>
-            <p>マウスなどの操作により、画面外にフォーカスがうつってしまうことがあります。マウスで画面をクリックしてから再度、プレイをお願いします。</p>
-          </details>
-      
-          <details class="qa-001">
-            <summary>無料ですか？</summary>
-            <p>無料でご利用いただけます。</p>
-          </details>
-      
+          
           <details class="qa-001">
             <summary>Youtube等の動画配信サイトでの実況は可能ですか？</summary>
-            <p>実況・生配信等でご自由に利用していただいて構いません。大歓迎です！！。ただし、他のユーザに対する迷惑行為及び、チートまたは意図したバグを使用した動画の配信はおやめください。</p>
+            <p>実況・生配信等でご自由に利用していただいて構いません。大歓迎です。</p>
           </details>
-      
-          <details class="qa-001">
-            <summary>IPad等のIOSでプレイできますか</summary>
-            <p>環境によっては端末にキーボードを接続してプレイすることが可能です。iPad mini 5での動作は確認済みです。</p>
-          </details>
-      
-          <details class="qa-001">
-            <summary>対戦相手とチャットをしたいです。</summary>
-            <p>対戦相手とのチャット機能はありません。フレンド対戦のみのチャット機能の実装は予定しています。</p>
-          </details>
-      
-          <details class="qa-001">
-            <summary>音量を調節したいです</summary>
-            <p>画面右上の設定からBGM、SEそれぞれの音量調節を行うことができます。</p>
-          </details>
-      
-          <details class="qa-001">
-            <summary>どうして「ピクタイピング」なの？</summary>
-            <p>プレイヤーに「ピクトグラム」を使用しているためです。</p>
-          </details>
+          
         </div>
         <div class="page-summaries-item" id="notice-list">
           <h2><i class="icon-notice"></i>お知らせ</h2>
@@ -125,12 +94,8 @@
           <!-- 日付とお知らせリスト -->
           <ul>
             <li class="page-news-item">
-              <p class="notice-date">2023年8月8日</p>
-              <p class="notice-text">Webサイトの刷新を行いました</p>
-            </li>
-            <li class="page-news-item">
-              <p class="notice-date">2023年7月20日</p>
-              <p class="notice-text">一部バグ修正を行いました。</p>
+              <p class="notice-date">2023年10月28日</p>
+              <p class="notice-text">リリースしました。</p>
             </li>
           </ul>
       
@@ -140,19 +105,20 @@
 
       <footer class="page-footer">
         <div class="footer-container">
-          <a href="https://twitter.com/pictyping" class="twitter-link" target="_blank" rel="noopener noreferrer">
+          <!-- Twitter -->
+          <!-- <a href="" class="twitter-link" target="_blank" rel="noopener noreferrer">
             <i class="twitter-logo"></i>
-          </a>
+          </a> -->
           <!-- 利用規約 -->
-          <a href="<%= terms_path %>" target="_blank">利用規約</a>
+          <a href="terms.html" target="_blank">利用規約</a>
           <!-- プライバシーポリシー　-->
-          <a href="<%= privacy_path %>" target="_blank">プライバシーポリシ</a>
-          <!-- お問い合わせリンク　-->
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScxFoEh3DXXiOPf3grT-VIt-V7M8TkXqYgLY7Quz2az4ZbWFA/viewform" target="_blank">お問い合わせ</a>
+          <a href="privac.html" target="_blank">プライバシーポリシ</a>
+
+          <a href="about.html" target="_blank">運営者情報</a>
       
         </div>
       
-        <p class="copyright">© 2023 Pictyping</p>
+        <p class="copyright">© 2023 pipipiyo</p>
       </footer>
   </body>
 </html>

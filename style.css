@@ -1,0 +1,285 @@
+@charset "utf-8";
+/** * *************************************** * ページ全体に関わるCSSの設定 * *************************************** */
+ html *, ::before, ::after {
+	 box-sizing: border-box;
+}
+/* フォント */
+ html {
+	 font-size: 14px;
+}
+ @media (min-width: 768px) {
+	 html {
+		 font-size: 16px;
+	}
+}
+ body {
+	 font-family: sans-serif;
+	 margin: 0;
+}
+ body a {
+	 color: #1d8efe;
+}
+ .article-container {
+	 margin: 0 auto;
+	 max-width: 700px;
+}
+ .btn-square-blue {
+	 display: inline-block;
+	 padding: 10px 20px;
+	 background-color: #4fc0ff;
+	 color: white;
+	 border: none;
+	 border-radius: 5px;
+	 text-decoration: none;
+	 font-weight: bold;
+	 text-align: center;
+	 cursor: pointer;
+}
+ .btn-square-blue:hover {
+	 background-color: #45a7dc;
+}
+ li {
+	 color: #6f6f6f;
+	 line-height: 2em;
+}
+ li span {
+	 color: #222;
+}
+/** * *************************************** * ヘッダー * *************************************** * * ヘッダーコンテナ */
+ .page-header {
+	 background: #f0f0f0;
+	 padding: 0;
+	 margin-bottom: 30px;
+}
+ .page-header .header-container {
+	 display: flex;
+	 align-items: center;
+	 justify-content: space-between;
+	 padding: 10px 0;
+}
+ @media (max-width: 768px) {
+	 .page-header .header-container {
+		 display: block;
+	}
+}
+ .page-header .header-container .header-logo {
+	 padding: 0px 0 0px 50px;
+	 margin: 0 auto;
+}
+ .page-header .header-container .header-logo img {
+	 display: block;
+	 width: 180px;
+}
+ .page-header .header-container .header-nav {
+	 display: flex !important;
+	 flex-direction: row;
+	 justify-content: flex-end;
+	 margin: 0 50px;
+}
+ .page-header .header-container .header-nav li {
+	 white-space: nowrap;
+	 margin: 0 5px;
+	 padding: 0 5px;
+	 list-style: none;
+}
+ .page-header .header-container .header-nav li .btn-text-black {
+	 display: inline-block;
+	 padding: 10px 0px;
+	 background-color: #f0f0f0;
+	 color: #545454;
+	 border: none;
+	 border-radius: 5px;
+	 text-decoration: none;
+	 font-weight: bold;
+	 text-align: center;
+	 cursor: pointer;
+}
+ .page-header .header-container .header-nav li .btn-text-black:hover {
+	 color: #57f;
+}
+ .page-header .header-container .header-nav li #btn-ranking-link::before {
+	 content: image-url("vip-crown-fill.svg");
+	 display: inline-block;
+	 width: 20px;
+	 height: 20px;
+	 background-size: cover;
+	 margin-right: 5px;
+	 vertical-align: middle;
+}
+ .gc-container {
+	 margin: 0 auto;
+	 margin-bottom: 40px;
+}
+ .gc-container .explain {
+	 display: flex;
+	 justify-content: flex-end;
+	 margin: 0 auto;
+}
+ .gc-container #unity-webgl {
+	 width: 100%;
+	 height: 100%;
+}
+ .gc-container .game-screen {
+	 margin: 0 auto;
+	 width: 300px;
+	 height: 169.014084507px;
+}
+ @media screen and (min-width: 640px) {
+	 .gc-container .game-screen {
+		 width: calc(640px * 0.7);
+		 height: calc(360.5633802817px * 0.7);
+	}
+}
+ @media screen and (min-width: 980px) {
+	 .gc-container .game-screen {
+		 width: calc(980px * 0.7);
+		 height: calc(552.1126760563px * 0.7);
+	}
+}
+ @media screen and (min-width: 1320px) {
+	 .gc-container .game-screen {
+		 width: calc(1320px * 0.7);
+		 height: calc(743.661971831px * 0.7);
+	}
+}
+ @media screen and (min-width: 1660px) {
+	 .gc-container .game-screen {
+		 width: calc(1660px * 0.7);
+		 height: calc(935.2112676056px * 0.7);
+	}
+}
+ @media screen and (min-width: 2000px) {
+	 .gc-container .game-screen {
+		 width: calc(2000px * 0.7);
+		 height: calc(1126.7605633803px * 0.7);
+	}
+}
+ .page-summaries {
+	 margin: 0 auto;
+}
+ .page-summaries .page-summaries-item {
+	 margin: 0px 20% 40px;
+}
+ .page-summaries .page-summaries-item h2 {
+	 margin-top: 0;
+}
+ .page-summaries #notice-list ul {
+	 padding-left: 0px;
+}
+ .page-summaries #notice-list .page-news-item {
+	 list-style: none;
+	 margin-bottom: 30px;
+}
+ .page-summaries #notice-list .page-news-item .notice-date {
+	 margin: 0 auto;
+	 font-weight: bold;
+	 font-size: 14px;
+	 color: #333;
+}
+ .page-summaries #notice-list .page-news-item .notice-text {
+	 margin: 0 auto;
+	 font-size: 14px;
+	 color: #686868;
+}
+ .page-summaries h2 {
+	 display: flex;
+	 align-items: center;
+}
+ .page-summaries h2 i {
+	 width: 30px;
+	 height: 30px;
+	 background: #34c9ff;
+	 border-radius: 25%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 margin-right: 10px;
+}
+ .page-summaries h2 i::before {
+	 content: "";
+	 width: 20px;
+	 height: 20px;
+	 background-size: cover;
+}
+ .page-summaries h2 .way-of-playing {
+	 background: #3c4597;
+}
+ .page-summaries h2 .way-of-playing::before {
+	 background-image: image-url("gamepad-fill.svg");
+}
+ .page-summaries h2 .icon-notes {
+	 background: #ff423e;
+}
+ .page-summaries h2 .icon-notes::before {
+	 background-image: image-url("shield-check-line.svg");
+}
+ .page-summaries h2 .icon-notice {
+	 background: #f0a500;
+}
+ .page-summaries h2 .icon-notice::before {
+	 background-image: image-url("megaphone-line.svg");
+}
+ .page-summaries h2 .icon-question {
+	 background: #46b4ff;
+}
+ .page-summaries h2 .icon-question::before {
+	 background-image: image-url("questionnaire-line.svg");
+}
+/** * *************************************** * フッター * *************************************** * * フッターコンテナ */
+ .page-footer {
+	 background: #f0f0f0;
+}
+ .page-footer .copyright {
+	 text-align: center;
+	 padding-bottom: 10px;
+	 margin: 0 auto;
+	 color: #636363;
+}
+ .footer-container {
+	 padding: 30px 4% 10px;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .footer-container a {
+	 margin-right: 30px;
+	 text-decoration: none;
+	 color: #636363;
+}
+ .footer-container a:hover {
+	 color: #34c9ff;
+}
+ .footer-container .twitter-link {
+	 margin-right: 30px;
+	 width: 50px;
+	 height: 50px;
+	 background: #25c2da;
+	 border-radius: 25%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .footer-container .twitter-link .twitter-logo {
+	 width: 60%;
+	 height: 60%;
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-image: image-url("twitter-logo-white.svg");
+}
+ .footer-container .twitter-link:hover {
+	 background: #000;
+}
+ @media (max-width: 768px) {
+	 .footer-container {
+		 padding: 30px 15% 10px;
+		 flex-direction: column;
+	}
+	 .footer-container a {
+		 margin-right: 0px;
+		 margin-bottom: 10px;
+	}
+	 .footer-container .twitter-link {
+		 margin-right: 0px;
+	}
+}
+ 
