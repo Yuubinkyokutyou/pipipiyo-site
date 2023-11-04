@@ -98,7 +98,7 @@
 	 color: #57f;
 }
  .page-header .header-container .header-nav li #btn-ranking-link::before {
-	 content: image-url("vip-crown-fill.svg");
+	 content: url("./images/vip-crown-fill.svg");
 	 display: inline-block;
 	 width: 20px;
 	 height: 20px;
@@ -205,25 +205,25 @@
 	 background: #3c4597;
 }
  .page-summaries h2 .way-of-playing::before {
-	 background-image: image-url("gamepad-fill.svg");
+	 background-image: url("./images/gamepad-fill.svg");
 }
  .page-summaries h2 .icon-notes {
 	 background: #ff423e;
 }
  .page-summaries h2 .icon-notes::before {
-	 background-image: image-url("shield-check-line.svg");
+	 background-image: url("./images/shield-check-line.svg");
 }
  .page-summaries h2 .icon-notice {
 	 background: #f0a500;
 }
  .page-summaries h2 .icon-notice::before {
-	 background-image: image-url("megaphone-line.svg");
+	 background-image: url("./images/bell-fill.svg");
 }
  .page-summaries h2 .icon-question {
 	 background: #46b4ff;
 }
  .page-summaries h2 .icon-question::before {
-	 background-image: image-url("questionnaire-line.svg");
+	 background-image: url("./images/questionnaire-line.svg");
 }
 /** * *************************************** * フッター * *************************************** * * フッターコンテナ */
  .page-footer {
@@ -264,7 +264,7 @@
 	 height: 60%;
 	 background-repeat: no-repeat;
 	 background-position: center;
-	 background-image: image-url("twitter-logo-white.svg");
+	 background-image: url("./images/twitter-logo-white.svg");
 }
  .footer-container .twitter-link:hover {
 	 background: #000;
