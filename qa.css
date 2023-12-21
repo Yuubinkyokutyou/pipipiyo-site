@@ -24,6 +24,10 @@
     color: #75bbff;
     content: "Q";
 }
+.qa-001 summary::before {
+    color: #75bbff;
+    content: "Q";
+}
 .qa-001 summary::after {
     transform: translateY(-25%) rotate(45deg);
     width: 7px;

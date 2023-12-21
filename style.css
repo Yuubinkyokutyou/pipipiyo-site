@@ -217,13 +217,19 @@
 	 background: #f0a500;
 }
  .page-summaries h2 .icon-notice::before {
-	 background-image: url("./images/bell-fill.svg");
+	 background-image: url("./images/megaphone-line.svg");
 }
  .page-summaries h2 .icon-question {
 	 background: #46b4ff;
 }
  .page-summaries h2 .icon-question::before {
 	 background-image: url("./images/questionnaire-line.svg");
+}
+.page-summaries h2 .credit-list {
+	background: #2f2f2f;
+}
+.page-summaries h2 .credit-list::before {
+	background-image: url("./images/copyright-line.svg");
 }
 /** * *************************************** * フッター * *************************************** * * フッターコンテナ */
  .page-footer {
@@ -249,26 +255,10 @@
  .footer-container a:hover {
 	 color: #34c9ff;
 }
- .footer-container .twitter-link {
-	 margin-right: 30px;
-	 width: 50px;
-	 height: 50px;
-	 background: #25c2da;
-	 border-radius: 25%;
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-}
- .footer-container .twitter-link .twitter-logo {
-	 width: 60%;
-	 height: 60%;
-	 background-repeat: no-repeat;
-	 background-position: center;
-	 background-image: url("./images/twitter-logo-white.svg");
-}
- .footer-container .twitter-link:hover {
-	 background: #000;
-}
+.twitter-logo {
+	width: 24px; /* 幅を24ピクセルに設定 */
+	height: auto; /* 高さを自動調整 */
+  }
  @media (max-width: 768px) {
 	 .footer-container {
 		 padding: 30px 15% 10px;
